@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+## 프로젝트 실행 방법
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone Repository
+```shell
+$ git clone https://github.com/Rejoiceee/hr.git
+```
 
-## Available Scripts
+2. Install Dependency
+```shell
+$ npm install
+```
 
-In the project directory, you can run:
+3. Start App
+```shell
+$ npm start
+```
 
-### `npm start`
+> Node.js가 설치되어 있어야 합니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 프로젝트 구조
 
-### `npm test`
+```bash
+/
+│   README.md
+│   .gitignore
+│   package.json
+└───package-lock.json
+│
+└───src
+│   │     index.js
+│   │     App.js
+│   │
+│   └───components
+│   │    └───button
+│   │    │   └───AddButton.js
+│   │    └───Cards.js
+│   │
+│   └───helper
+│   │    └───api.js
+│   │
+│   └───views
+│   │    └───List.js
+│   │
+│   └───static
+│   │    └───css
+│   │    │    │    App.css
+│   │    │    │    Cards.css
+│   │    │    └──index.css
+│   │    └───images
+│   │    │    └──loading.gif
+│   
+└───public
+    └───index.html
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- src : 프로젝트 root 디렉토리
+    - index.js : root js 파일
+    - App.js : `fetch`를 통해 데이터를 가져오고, 인입되는 url에 따라 component를 불러온다
+    - components : 컴포넌트를 모아 놓은 디렉토리
+        - card : card 관련 컴포넌트
+            - CardList.js : `Cards`컴포넌트를 이용하여 목록을 생성한다
+            - Cards.js : 목록에 들어가는 Card형태의 컴포넌트
+    - static : 정적 파일 디렉토리
+    - helper : 공통 기능을 모아놓은 디렉토리
+        - api.js : `fetch`를 공통으로 사용하기 위한 js 파일
+    - views : 페이지 관련 디렉토리
+        - index.js : 페이지를 공통으로 핸들링하기 위한 js 파일
+        - List.js : 리스트 페이지 컴포넌트
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 목록 삭제 & 페이지 전환
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+항목을 옆으로 플리킹후 `DELETE` 버튼 클릭시 목록에서 삭제된다.
+`id`와 `author`를 클릭할 경우 사진이 확대되어 새창으로 열린다.
