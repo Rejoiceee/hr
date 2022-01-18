@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react/cjs/react.development";
 import Cards from "../components/Cards";
 import useFetch from "../helper/api";
-import logo from '../loading.gif';
+import logo from '../static/images/loading.gif';
 
 const List = () => {
     const [list, setList] = useState([]);

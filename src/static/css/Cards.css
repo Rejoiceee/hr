@@ -1,0 +1,32 @@
+* {padding:0; margin:0; line-height:1;}
+img {width:100%;}
+
+.cardList {padding:3em; margin:0 auto; min-width:320px; box-sizing:border-box;}
+.card {overflow:hidden; width:100%;}
+.card__imageBox {position:relative; width:100%; height:0; padding-top:60%;}
+.card__imageBox .card_imageBox_image {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
+.card__info {position:relative; padding:1.5rem; background-color:#fff;}
+.card__info .card__info__author {display:inline-block;}
+.card__info .card__info__author a {color:#888; text-decoration:none;}
+.card__info .card__info__author a:hover {color:#ccc;}
+.card__info .card__info__id {position:absolute; right:1.5rem; top:50%; border-radius:50em; padding:0 1rem; background:#f6f6f6; line-height:1.5em; transform:translateY(-50%);}
+.card__info .card__info__id a {color:#555; text-decoration:none;}
+.card__info .card__info__id:hover {background:#eee;}
+
+.swipeable-list {flex:none; margin-top:1em;}
+.swipeable-list-item__trailing-actions {height:calc(100% - 65px); align-items:center; background:#d1103a;}
+.swipeable-list-item__trailing-actions > * {height:100%;}
+.cardDeleteButton {border:none; padding:0 1em; background:none; color:#fff;}
+
+@media screen and (min-width:767px) {
+	.cardList {display:flex; justify-content:space-between; flex-wrap:wrap; max-width:576px;}
+	
+}
+@media screen and (min-width:1000px) {
+	.cardList {max-width:768px; margin:0 auto; padding:0 2em;}
+	.swipeable-list {width:30%;}
+}
+
+@media screen and (min-width:1200px) {
+	.cardList {max-width:1200px; margin:0 auto; padding:0 2em;}
+}

@@ -6,7 +6,7 @@ import {
     Type
 } from 'react-swipeable-list';
 import 'react-swipeable-list/dist/styles.css';
-import "../Cards.css";
+import "../static/css/Cards.css";
 
 const Cards = ({data, index, onClickTableRow}) => {
 
